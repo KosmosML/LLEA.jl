@@ -16,8 +16,8 @@ notifications:
   email: false
 
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y gfortran
+  - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then sudo apt-get -qq update; fi
+  - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then sudo apt-get install -y gfortran; fi
 
 # uncomment the following lines to override the default test script
 # script:
