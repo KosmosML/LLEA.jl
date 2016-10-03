@@ -17,7 +17,7 @@ env:
   - FC=gfortran-4.6
 # uncomment the following lines to override the default test script
 script:
- - apt-cache search gfortran
+ - apt-cache search gcc
  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
  - julia -e 'Pkg.clone(pwd()); Pkg.build("LLEA"); Pkg.test("LLEA"; coverage=true)'
 after_success:
