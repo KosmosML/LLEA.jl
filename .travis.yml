@@ -12,7 +12,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - gfortran-6
+      - gfortran-5
 # uncomment the following lines to override the default test script
 #script:
 #  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
