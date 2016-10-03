@@ -1,5 +1,5 @@
 using LLEA
 using Base.Test
 
-# write your own tests here
-@test 1 == 2
+code = LLEA.init()
+@test code == 0
