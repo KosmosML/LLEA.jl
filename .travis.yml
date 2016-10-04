@@ -15,8 +15,8 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - gfortran-6
-env:
-  FC=gfortran-6
+install:
+  - if [[ "$TRAVIS_OS_NAME" != "osx" ]]; then export FC=gfortran-6; fi
 # uncomment the following lines to override the default test script
 #script:
 #  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
